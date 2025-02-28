@@ -1,0 +1,619 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+   
+   
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+    position: sticky;
+    top: 0;
+    /* left: 0;
+    z-index: 2; */
+    background-color: #fff;
+    padding: .5rem 0;
+  }
+  header span{
+    font-weight: 500;
+}
+  section, header, footer{
+    padding-left: 9vw;
+    padding-right: 9vw;
+    max-width: 100vw;
+  }
+
+
+  nav ul{
+    list-style-type: none;
+    gap: 1.5rem;
+    display: flex;
+    /* font-weight: 600; */
+  }
+
+  nav ul li a{
+    text-decoration: none;
+    display: flex;
+    color: #3b3b3b;
+    font-size: medium;
+    font-weight: 600;
+  }
+
+  .bg-btn{
+    padding: .7rem .8rem;
+    border-radius: 6px;
+    color: #fff;
+    background-color: rgb(5 103 247);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+   transition: background-color 0.3s ease;
+  }
+
+  .bg-btn:hover{
+    background-color: rgb(3 75 183);
+    
+  }
+
+.consultation{
+  display: flex;
+  gap: 1rem;
+  margin: 3rem 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100vw;
+  overflow: hidden;
+}
+.consult h1{
+  font-size: 3.40rem;
+  font-weight:500 ;
+  /* line-height: 1; */
+}
+
+
+.consult{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+  flex: 1 1 50%;
+}
+
+.consult-img{
+  width: 44.5%;
+  height: 30rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* flex-basis: 44.5%; */
+}
+
+.consult-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.consult .wht-btn{
+  background-color: white;
+  color: rgb(3 75 183);
+  padding: .7rem .8rem;
+  border: none;
+  font-size: larger
+}
+
+.consult p{
+  color: #4a4a4a;
+  font-size: 1.02rem;
+}
+
+.consult .extra-txt{
+  display: flex;
+  align-items: center;
+}
+.consult .years{
+  font-size: 2.5rem;
+
+}
+
+.consult .add-sign{
+  font-size: 2rem;
+  color: #0165fc;
+}
+
+.highlighted-txt{
+  color: #287ae1;
+  background-color: #f1f9ff;
+  width: fit-content
+}
+
+
+
+.services{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  margin-top: 7rem;
+}
+
+.services > div{
+  display: grid;
+  grid-template-columns: 70% auto;
+  gap: 10%;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #fafcfe;
+  align-items: center;
+  /* grid-column: span 1; */
+}
+
+.services h2{
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.services p{
+  line-height: 1.03rem;
+  color: #4a4a4a;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+
+
+
+.round-btn{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  cursor: pointer;
+  color: #2261c6;
+  /* outline: none; */
+  font-size: 1.5rem;
+  border: solid 1.5px #2261c6;
+  transition: background-color 0.12s ease-in-out;
+
+}
+
+
+.round-btn:hover{
+  background-color: #2261c6;
+  color: white;
+  border: solid 1.5px white;
+}
+
+.nav-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 1.6rem 0 6rem 0;
+}
+.dot {
+height: 15px;
+width: 15px;
+background-color:#e7f0fe;
+border-radius: 50%;
+
+display: inline-block;
+}
+
+.dot:first-of-type{
+  background-color:#0165fc;
+}
+
+.consult2{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+
+.consult2 .image{
+  height: 30rem;
+  width: 50%;
+  border-radius: 1.2rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 40%;
+}
+
+.consult2 .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+
+}
+
+
+
+.side-txt{
+  width: 45%;
+  /* min-width: 400px; */
+  padding: 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 40%;
+}
+
+.side-txt h2{
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.side-txt p{
+  margin-bottom: 1.4rem;
+}
+
+.experience{
+  background-color: #fafcfe;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.experience .highlighted-txt{
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+ .experience .left-side, .experience .right-side{
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  align-items: center;
+ }
+
+ .left-side > i, .right-side > i{
+  font-size: 2.2rem;
+  color:#0165fc;
+ }
+
+ .left-side > div{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+ }
+
+ .left-side h2{
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1;
+ }
+
+ 
+
+ .left-side p{
+  font-size: 1.30rem;
+  font-weight: 400;
+ }
+
+ .right-side p{
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+
+ }
+
+ .right-side hr{
+  width: 80%;
+  height: 2px;
+  background-color: #f1f9ff;
+  border: none;
+  margin-bottom: 1rem;
+ }
+ .right-side .reviewer{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+ }
+ .right-side .avatar{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+ }
+ .details span{
+  font-weight: 600;
+ }
+
+ .details > div i{
+  color: #f2a006;
+ }
+
+ .right-side .avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+ }
+
+ .reviewer .details{
+  display: block;
+
+ }
+
+.our-doctors{
+  margin-top: 7rem;
+}
+
+.our-doctors h1{
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.doctors{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 2.5rem;
+  
+}
+
+.doc-container{
+  height: fit-content;
+  display: flex;
+  gap: .8rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.doc{
+  width: 100%;
+  height: 20rem;
+}
+
+.doc img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.doc-info{
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+}
+
+.doc-info .mini-summary{
+ font-size: .95rem; 
+}
+
+.doc-info .role{
+  color: #1f6ce9;
+  font-size: .8rem;  
+  font-weight: 500;
+  text-shadow: 
+    -0.5px -0.5px 0px #d3eafe, 
+    0.5px -0.5px 0px #d3eafe, 
+    -0.5px 0.5px 0px #d3eafe, 
+    0.5px 0.5px 0px #d3eafe;
+ 
+
+}
+
+.doc-info .doc-name{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.outline-btn{
+  width:fit-content;
+  padding: .4rem .9rem;
+  border-radius: 10px;
+  color:#1f6ce9;
+  background-color:white;
+  border: 2px solid #1f6ce9;
+  cursor: pointer;
+  font-size: 1.2rem;
+  outline: #a9ddfffa  solid 1px;
+
+}
+
+
+.final{
+  padding-top: 3.3rem;
+  padding-bottom: 3.3rem;
+  background-color: #f1f9ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin-top: 3rem;
+}
+
+.final p{
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* footer */
+footer{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+footer .inner-div span{
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.copy-right{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.copy-right .small-txt{
+  font-size: .8rem;
+}
+
+
+.socials{
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a{
+  color: rgb(3 75 183);;
+}
+
+.copy-right .logo{
+  font-weight: 600;
+}
+
+
+/* responsive design */
+
+@media screen and (max-width: 600px){
+  header nav{
+    display: none;
+  }
+
+  .consultation .consult h1{
+    font-size: 2rem;
+  }
+  .consult p{
+    width: 100%;
+    font-size: .8rem;
+  }
+   .buttons{
+    display: flex;
+    gap: .5rem;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   }
+  .consult .bg-btn{
+    font-size: .9rem;
+    padding:.5rem 1rem;
+    
+  }
+
+  .consult .wht-btn{
+    font-size:.9rem ;
+  }
+
+  .consult .years{
+    font-size: 1.5rem
+  }
+  .consult-img{
+    width:100%;
+    object-fit: cover;
+  }
+  .consult2 .image{
+    min-width: 100%;
+    height: 20rem;
+  }
+  .consult2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.2rem;
+  
+  }
+
+  .consult2 .side-txt{
+    width: 100%;
+  }
+
+  .services{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+
+  .services h2{
+    font-size: 1.05rem;
+  }
+  .services p{
+    font-size: .8rem;
+  }
+  .round-btn{
+    width: 3rem;
+    height: 3rem;
+  }
+
+ .side-txt h2, .left-side h2{
+    font-size: 1.4rem ;
+  }
+
+  .side-txt p, .left-side p, .right-side p{
+    font-size: 1.2rem;
+  }
+
+  .our-doctors h1{
+    font-size: 1.8rem;
+  }
+
+  .final p{
+    font-size: 2rem;
+  }
+
+
+
+}
