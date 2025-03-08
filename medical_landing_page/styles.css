@@ -149,7 +149,8 @@
   color: rgb(3 75 183);
   padding: .7rem .8rem;
   border: none;
-  font-size: larger
+  font-size: larger;
+  border-radius: 6px;
 }
 
 .consult p{
@@ -304,8 +305,10 @@ display: inline-block;
   padding-top: 6rem;
   padding-bottom: 6rem;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 2.5rem;
+  width: 100%;
 }
 
 .experience .highlighted-txt{
@@ -313,16 +316,21 @@ display: inline-block;
   font-weight: 500;
 }
 
-
- .experience .left-side, .experience .right-side{
+ .experience .right-side{
   display: flex;
   justify-content: space-between;
   width: fit-content;
   align-items: center;
+  gap: 2rem;
+  width: 52%;
+ }
+
+ .experience .left-side{
+  width: 40%;
  }
 
  .left-side > i, .right-side > i{
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color:#0165fc;
  }
 
@@ -370,7 +378,7 @@ display: inline-block;
   border-radius: 50%;
  }
  .details span{
-  font-weight: 600;
+  font-weight: 400;
  }
 
  .details > div i{
@@ -388,7 +396,25 @@ display: inline-block;
   display: block;
 
  }
+nav ul li a{
+  position: relative;
+}
 
+ nav ul li a::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #0165fc;
+  transition: width 0.20s;
+ }
+
+ nav ul li a:hover::after{
+  width: 100%;
+ }
 .our-doctors{
   margin-top: 7rem;
 }
@@ -402,7 +428,6 @@ display: inline-block;
 .doctors{
   display: grid;
   grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-columns: repeat(3, 1fr); */
   gap: 2.5rem;
   
 }
@@ -527,13 +552,61 @@ footer .inner-div span{
 .copy-right .logo{
   font-weight: 600;
 }
+/* hamburger css style */
+#toggler, .hamburger{
+  display: none;
+}
+
+.bars{
+  height: 2px;
+  width: 30px;
+  background-color: red;
+  margin: 6px 0;
+}
 
 
 /* responsive design */
 
 @media screen and (max-width: 600px){
-  header nav{
+  header nav, header button{
     display: none;
+  }
+
+  header .hamburger{
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+  .experience{
+    width: 100%;
+  }
+  .left-side{
+    width: 300px
+  }
+  .left-side h2{
+    font-size: 2.2rem;
+  }
+
+  .left-side p{
+    font-size: 1.1rem;
+  }
+
+  .right-side p{
+    font-size: 1.2rem;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  #toggler:checked ~ nav{
+    display:block;
   }
 
   .consultation .consult h1{
@@ -614,6 +687,14 @@ footer .inner-div span{
     font-size: 2rem;
   }
 
+  footer .inner-div, .inner-div .copy-right{
+    min-width: 90vw;
+    text-align: center;
+  }
+  .copy-right{
+    flex-direction: column;
+    align-items: center;
+  }
 
 
 }
