@@ -219,7 +219,7 @@ header nav ul a {
 }
 
 .left-timeline{
-    left: -2rem;
+    left: -2.5rem;
     top: 14vh
 }
 
@@ -387,10 +387,14 @@ header nav ul a {
 
 /* testimony section starts here */
 
+
+.section-testimony{
+    padding: 0 2rem;
+    width: 100%;
+    height: fit-content;
+}
 .testimony{
     margin-top: 5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
     width: 100%;
     height: 55vh;
     background-image: url("images/image 11.jpg");
@@ -426,8 +430,8 @@ header nav ul a {
 
 .places .images{
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(260px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
 }
 
 .image-tile{
@@ -462,10 +466,17 @@ header nav ul a {
     background-repeat: no-repeat;
 }
 
-.final{
-    margin-left: 2rem;
-    margin-right: 2rem;
+
+.final-section{
+    padding: 0 2rem;
     margin-top: 8rem;
+    width: 100%;
+    height: 55vh;
+}
+.final{
+    padding: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("images/image 3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
