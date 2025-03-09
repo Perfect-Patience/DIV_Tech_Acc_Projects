@@ -175,6 +175,7 @@ header nav ul a {
     padding: 0 2rem;
     flex-wrap: wrap;
     position: relative;
+    margin: 7rem 0;
 }
 
 .map-tile{
@@ -388,6 +389,8 @@ header nav ul a {
 
 .testimony{
     margin-top: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     width: 100%;
     height: 55vh;
     background-image: url("images/image 11.jpg");
@@ -411,6 +414,8 @@ header nav ul a {
 /* places section styling starts here */
 .places{
     margin-top: 5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
 
 }
 
@@ -458,6 +463,8 @@ header nav ul a {
 }
 
 .final{
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: 8rem;
     background-image: url("images/image 3.jpg");
     background-size: cover;
